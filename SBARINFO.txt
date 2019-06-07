@@ -5,12 +5,9 @@ statusbar normal, fullscreenoffsets, 0.75
 	//LEFT SIDE
 	drawimage "BDSTBL",	0,	 -74; 
 	//HUD face
-	IfCVarInt "bdoom_hudface", 1
+	drawselectedinventory alternateonempty, INDEXFONT, 53, -32
 	{
-		drawselectedinventory alternateonempty, INDEXFONT, 53, -32
-		{
-			drawmugshot "STF", 5, 53, -32;
-		}
+		drawmugshot "STF", 5, 53, -32;
 	}
 	//armor
 	drawnumber 3, HUDFONT_DOOM, untranslated, armor, 	48, -60, 0;
@@ -79,7 +76,7 @@ statusbar fullscreen, fullscreenoffsets // ZDoom HUD
 
 	WeaponAmmo Clip
 	{
-		InInventory Backpack || BD_Backpack
+		InInventory Backpack
 		{
 			drawnumber 3, HUDFONT_DOOM, yellow, ammo1, drawshadow, -25,-20,	0,red,50,	green, 200;
 		}
@@ -90,7 +87,7 @@ statusbar fullscreen, fullscreenoffsets // ZDoom HUD
 	}
 	WeaponAmmo Shell
 	{
-		InInventory Backpack || BD_Backpack
+		InInventory Backpack
 		{
 			drawnumber 3, HUDFONT_DOOM, yellow, ammo1, drawshadow, -25,-20,	0,red,16,	green, 50;
 		}
@@ -101,7 +98,7 @@ statusbar fullscreen, fullscreenoffsets // ZDoom HUD
 	}
 	WeaponAmmo RocketAmmo
 	{
-		InInventory Backpack || BD_Backpack
+		InInventory Backpack
 		{
 			drawnumber 3, HUDFONT_DOOM, yellow, ammo1, drawshadow, -25,-20,	0,red,10,	green, 40;
 		}
@@ -112,7 +109,7 @@ statusbar fullscreen, fullscreenoffsets // ZDoom HUD
 	}
 	WeaponAmmo Cell
 	{
-		InInventory Backpack || BD_Backpack
+		InInventory Backpack
 		{
 			drawnumber 3, HUDFONT_DOOM, yellow, ammo1, drawshadow, -25,-20,	0,red,80,	green, 300;
 		}
